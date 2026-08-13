@@ -9,6 +9,7 @@ let closings = [
   "Signs point to awesome",
   "Keep shining!",
   "Have an amazing day!",
+  "Keep being amazing!",
 ];
 
 function randomNumber(a,b) {

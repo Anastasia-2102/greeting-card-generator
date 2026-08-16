@@ -3,15 +3,32 @@ let adjectiveInput = document.getElementById("adjective-input");
 let nounInput = document.getElementById("noun-input");
 let makeButton = document.getElementById("make-button");
 let cardText = document.getElementById("card-text");
+let closingText = document.getElementById("closing-text");
+
+let closings = [
+  "Keep shining.",
+  "Stay amazing.",
+  "Keep being awesome.",
+  "Have a wonderful day.",
+  "With lots of good wishes."
+];
+
+function randomNumber(a, b) {
+  return Math.floor(Math.random() * (b - a + 1)) + a;
+}
+
 
 function makeCard() {
   let friendName = nameInput.value;
   let adjective = adjectiveInput.value;
   let noun = nounInput.value;
+  let closing = closings[randomNumber(0, closings.length - 1)];
 
-  cardText.textContent =
-    "Dear " + friendName + ", you are as " + adjective +
-    " as a " + noun + ". Happy birthday from the generator.";
+   cardText.textContent =
+     "Dear " + friendName + ", you are as " + adjective +
+     " as a " + noun + ". Happy birthday from the generator.";
+	
+   closingText.textContent = closing;
 }
 
 makeButton.addEventListener("click", makeCard);

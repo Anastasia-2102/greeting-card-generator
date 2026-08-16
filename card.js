@@ -7,6 +7,7 @@ let closingText = document.getElementById("closing-text");
 let surpriseButton = document.getElementById("surprise-button");
 let cardSection = document.getElementById("card-section");
 let resetButton = document.getElementById("reset-button");
+let bonusLine = document.getElementById("bonus-line");
 
 let closings = [
   "Keep shining.",
@@ -16,13 +17,15 @@ let closings = [
   "With lots of good wishes."
 ];
 
+let cardsMade = 0;
+
 function randomNumber(a, b) {
   return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
 
 function makeCard() {
-   cardSection.hidden = false;
+	cardSection.hidden = false;
    
   let friendName = nameInput.value;
   let adjective = adjectiveInput.value;
@@ -34,6 +37,12 @@ function makeCard() {
      " as a " + noun + ". Happy birthday from the generator.";
 	
    closingText.textContent = closing;
+   
+   cardsMade = cardsMade + 1;
+
+  if (cardsMade >= 5) {
+   bonusLine.hidden = false;
+  }
 }
 
 makeButton.addEventListener("click", makeCard);

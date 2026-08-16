@@ -4,6 +4,7 @@ let nounInput = document.getElementById("noun-input");
 let makeButton = document.getElementById("make-button");
 let cardText = document.getElementById("card-text");
 let closingText = document.getElementById("closing-text");
+let surpriseButton = document.getElementById("surprise-button");
 
 let closings = [
   "Keep shining.",
@@ -32,3 +33,10 @@ function makeCard() {
 }
 
 makeButton.addEventListener("click", makeCard);
+
+function surpriseMe() {
+  let index = randomNumber(0, closings.length - 1);
+  closingText.textContent = closings[index];
+}
+
+surpriseButton.addEventListener("click", surpriseMe);

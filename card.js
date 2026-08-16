@@ -5,6 +5,8 @@ let makeButton = document.getElementById("make-button");
 let cardText = document.getElementById("card-text");
 let closingText = document.getElementById("closing-text");
 let surpriseButton = document.getElementById("surprise-button");
+let cardSection = document.getElementById("card-section");
+let resetButton = document.getElementById("reset-button");
 
 let closings = [
   "Keep shining.",
@@ -20,6 +22,8 @@ function randomNumber(a, b) {
 
 
 function makeCard() {
+   cardSection.hidden = false;
+   
   let friendName = nameInput.value;
   let adjective = adjectiveInput.value;
   let noun = nounInput.value;
@@ -40,3 +44,12 @@ function surpriseMe() {
 }
 
 surpriseButton.addEventListener("click", surpriseMe);
+
+function resetGenerator() {
+  nameInput.value = "";
+  adjectiveInput.value = "";
+  nounInput.value = "";
+  cardSection.hidden = true;
+}
+
+resetButton.addEventListener("click", resetGenerator);

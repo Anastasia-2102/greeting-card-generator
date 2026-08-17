@@ -1,0 +1,57 @@
+body {
+  background: #edf8f6;
+  color: #243b3a;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  color: #247a73;
+  font-size: 2.8rem;
+}
+
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#order-section,
+#card-section {
+  margin-bottom: 2rem;
+}
+
+#card-section article {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(120, 60, 50, 0.12);
+  color: #243b3a;
+}
+
+button {
+  background-color: #247a73;
+  border-color: #247a73;
+  color: white;
+  border-radius: 10px;
+}
+
+button:hover {
+	background-color: #1d625c;
+  border-color: #1d625c;
+}
+
+input:focus {
+  outline: 3px solid #7bc8c0;
+}
+
+#closing-text {
+  color: #247a73;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+}
